@@ -1,0 +1,49 @@
+@import url('./_vars.scss');
+
+body, form, input, legend {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.btn-submit{
+    background-color:var(--hospital-green) !important;
+    color: white;
+    width: 200px !important;
+    margin: 0 auto !important;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 10px;
+    margin-top: 1rem !important;
+}
+
+a{
+    color: var(--hospital-green);
+    font-weight: 700;
+}
+
+form{
+    .group-form{
+        display: flex;
+        gap: 1rem;
+        fieldset{
+            flex: 1;
+        }
+    }
+}
+input {
+    padding: 10px;
+    border: none;
+    width: 90%;
+    border: 1px solid var(--hospital-green);
+  }
+  fieldset {
+    margin: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+  }
+.primary-button a{
+    color: white;
+}

@@ -1,0 +1,69 @@
+import React from 'react'
+import '../styles/Loading.scss'
+
+const Loading = () => {
+  return (
+    <section class="card-container-skeleton" id="users">
+            <div class="card-skeleton">
+            <div class="header-img skeleton"></div>
+                <div class="body-card">
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                </div>
+            </div>
+            <div class="card-skeleton">
+            <div class="header-img skeleton"></div>
+                <div class="body-card">
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+
+
+                </div>
+            </div>
+            <div class="card-skeleton">
+            <div class="header-img skeleton"></div>
+                <div class="body-card">
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+
+                </div>
+            </div>
+            <div class="card-skeleton">
+            <div class="header-img skeleton"></div>
+                <div class="body-card">
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    
+
+                </div>
+            </div>
+            <div class="card-skeleton">
+                <div class="header-img skeleton"></div>
+                <div class="body-card">
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+
+
+                </div>
+            </div>
+            <div class="card-skeleton">
+            <div class="header-img skeleton"></div>
+                <div class="body-card">
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+
+                </div>
+            </div>
+        </section>
+  )
+}
+
+export default Loading

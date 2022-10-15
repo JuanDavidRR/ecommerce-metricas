@@ -1,0 +1,24 @@
+@use './vars';
+
+.main-container{
+	input{
+		width: 500px;
+		display: grid;
+		margin: 0 auto;
+	}
+}
+.ProductList {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, 300px);
+	gap: 40px;
+	place-content: center;
+	margin-top: 2rem;
+
+}
+
+
+@media (max-width: 640px) {
+	.ProductList {
+		grid-template-columns: repeat(auto-fill, 140px);
+	}
+}

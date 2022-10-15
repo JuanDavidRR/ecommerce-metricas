@@ -1,0 +1,101 @@
+@use './vars';
+
+.MyAccount {
+	width: 90%;
+	display: grid;
+	margin: 0 auto;
+}
+.MyAccount__form > section{
+	display: flex;
+	gap: 10px;
+}
+
+.MyAccount__container{
+	display: flex;
+	gap: 4rem;
+	margin-top: 3rem;
+	.MyAccount__support{
+		flex: 1;
+	}
+	.MyAccount__info{
+		flex: 3;
+	}
+}
+.logo {
+	width: 150px;
+	margin-bottom: 48px;
+	justify-self: center;
+	display: none;
+}
+
+.MyAccount fieldset{
+	margin: 10px;
+	border-radius: 10px;
+	border-color: var(--hospital-green);
+	width: 100%;
+}
+
+.btn-tab{
+	padding: 15px 20px;
+	border: 1px solid var(--hospital-green);
+	background-color: white;
+	font-family: 'Quicksand', sans-serif;
+	font-weight: bold;
+	margin: 0rem 10px 2rem;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: 0.4s;
+	&.active{
+		background-color: var(--hospital-green);
+		color: white;
+	}
+}
+.title {
+	font-size: var(--lg);
+	margin-bottom: 36px;
+	text-align: start;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+}
+.form div {
+	display: flex;
+	flex-direction: column;
+}
+.label {
+	font-size: var(--sm);
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+.MyAccount__value {
+	font-size: var(--md);
+	margin: 8px 0 20px 0;
+	padding: 10px;
+	background-color: var(--text-input-field);
+	border-radius: 10px;
+}
+.secondary-button {
+	background-color: var(--white);
+	border-radius: 8px;
+	border: 1px solid var(--hospital-green);
+	color: var(--hospital-green);
+	width: 100%;
+	cursor: pointer;
+	font-size: var(--md);
+	font-weight: bold;
+	height: 50px;
+}
+.login-button {
+	margin-top: 14px;
+	margin-bottom: 30px;
+}
+@media (max-width: 640px) {
+	.form-container {
+		height: 100%;
+	}
+	.form {
+		height: 100%;
+		justify-content: space-between;
+	}
+}
