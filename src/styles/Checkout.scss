@@ -3,22 +3,46 @@
 .Checkout {
 	width: 90%;
 	display: flex;
-	margin: 0 auto;
+	margin: 4rem auto;
 	gap: 5rem;
 	background-color: #ffffff;
 	overflow-y: auto;
 	z-index: 10000;
 	animation: swipeDown 0.26s ease;
-
+	@media (max-width:500px) {
+		display: block;
+	}
 }
+
+.form-container {
+	display: flex;
+	justify-content: space-around;
+	gap: 20px;
+	@media (max-width: 500px) {
+		display: block;
+	}
+	section {
+		flex: 1;
+		@media (max-width:500px) {
+			width: 100%;
+		}
+	}
+}
+
 .title {
 	font-size: var(--lg);
 }
 .Checkout__container {
 	width: 60%;
+	@media (max-width:500px) {
+		width: 100%;
+	}
 }
 .Checkout__payment{
 	width: 40%;
+	@media (max-width:500px) {
+		width: 100%;
+	}
 }
 .Checkout-content {
 	display: flex;

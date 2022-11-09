@@ -4,35 +4,23 @@ import "../styles/MobileMenu.scss";
 
 const MobileMenu = () => {
   return (
-    <div class="mobile-menu">
+    <div className="mobile-menu">
       <ul>
         <li>
-          <NavLink to={"/category/1"}>Ropa</NavLink>
+          <NavLink to={"/"}>Inicio</NavLink>
         </li>
         <li>
-          <NavLink to={"/category/2"}>Electrodomesticos</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/category/3"}>Muebles</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/category/4"}>Zapatos</NavLink>
-        </li>
-        <li>
-          <NavLink to={"/products"}>TIENDA</NavLink>
+          <NavLink to={"/products"}>Tienda</NavLink>
         </li>
         <li>
           <NavLink to={"/faq"}>FAQ</NavLink>
         </li>
+        
         <li>
-          <a href="/account" class="email">
-            frailejon@gmail.com
-          </a>
+          <NavLink to={"/account"}>Mi cuenta</NavLink>
         </li>
         <li>
-          <a href="/signup" class="sign-out">
-            Sign out
-          </a>
+          <NavLink className='sign-out' to={"/login"}>Salir</NavLink>
         </li>
       </ul>
     </div>

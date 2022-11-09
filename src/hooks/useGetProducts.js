@@ -3,14 +3,13 @@ import axios from "axios";
 
 const useGetProducts = (infiniteScroll, API) => {
   let limit = 0;
-  let limitProducts = 5
   const [products, setProducts] = useState([]);
 
   const getNewProducts = async () => {
     if (infiniteScroll) {
       const newProducts = [];
       axios
-        .get(`https://api.escuelajs.co/api/v1/products?limit=${limitProducts}&offset=${limit}`)
+        .get(`http://localhost:3000/api/product/list`)
         .then(({ data }) => {
           //añadiendo los personajes al array
           data.map((c) => newProducts.push(c));
@@ -36,6 +35,7 @@ const useGetProducts = (infiniteScroll, API) => {
     //Ejecuta nuevamente la función de getCharacters
     if (currentHeight + 1 >= scrollHeight) {
       getNewProducts();
+      console.log('HPTS');
     }
   };
 

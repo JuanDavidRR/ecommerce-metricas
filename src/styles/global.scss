@@ -1,8 +1,9 @@
 @import url('./_vars.scss');
 
-body, form, input, legend {
+body, form, input, legend, button {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden;
 }
 
 .btn-submit{
@@ -46,4 +47,13 @@ input {
   }
 .primary-button a{
     color: white;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    @media (max-width:500px) {
+		width: 90%;
+	}
 }

@@ -34,7 +34,8 @@ nav {
     display: flex;
 }
 .navbar-left ul {
-    margin-left: 12px;
+    margin-left: 2rem;
+    gap: 2rem;
 }
 .navbar-left ul li a,
 .navbar-right ul li a {

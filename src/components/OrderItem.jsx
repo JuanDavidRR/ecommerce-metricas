@@ -13,11 +13,11 @@ const OrderItem = ({ product }) => {
 	return (
 		<div className="OrderItem">
 			<figure>
-				<img src={product.images[0]} alt={product.title} />
+				<img src={product.productData.imageUrl} alt={product.productData.name} />
 			</figure>
-			<p>{product.title}</p>
-			<p>${product.price}</p>
-			<img src={close} alt="close" onClick={() => handleRemove(product)} />
+			<p>{product.productData.name}</p>
+			<p>${product.productData.price}</p>
+			<i className="fa-solid fa-xmark" onClick={() => handleRemove(product)}></i>
 		</div>
 	);
 }

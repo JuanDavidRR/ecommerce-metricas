@@ -2,6 +2,7 @@ import React, { lazy, useEffect, useState } from "react";
 import "../styles/ProductList.scss";
 import { useParams } from "react-router";
 import { Helmet } from "react-helmet";
+import '../styles/Home.scss'
 
 const ProductItem = lazy(()=> import('../components/ProductItem'))
 
@@ -9,7 +10,7 @@ const ProductItem = lazy(()=> import('../components/ProductItem'))
 const Category = ({ limit = 25, infinityScroll }) => {
   const params = useParams();
 
-  let API = `https://api.escuelajs.co/api/v1/categories/${params.id}/products`;
+  let API = `https://api.escuelajs.co/api/v1/categories/${params.id}/products?limit=25&offset=1`;
 
   const [products, setProducts] = useState([]);
   const [query, setQuery] = useState("");

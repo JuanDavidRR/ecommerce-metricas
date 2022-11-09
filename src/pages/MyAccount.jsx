@@ -24,6 +24,7 @@ const MyAccount = () => {
             <li>Correo: noseque@poner.com</li>
             <li>Oficina: Calle 97#16-4h</li>
             <button className="btn-submit">Soporte whatsapp</button>
+            
           </ul>
         </section>
         <section className="MyAccount__info">

@@ -11,11 +11,10 @@ const ProductInfo = ({ product, setToggleProduct, handleClick }) => {
 
 	return (
 		<>
-			<img src={product.images[0]} alt={product.name} className="product"/>
+			<img src={product.productData.imageUrl} alt={product.productData.name} className="product"/>
 			<div className="ProductInfo">
-				<p>${product.price}</p>
-				<p>{product.name}</p>
-				<p>{product.description}</p>
+				<p>${product.productData.price}</p>
+				<p>{product.productData.name}</p>
 				<button
 					className="primary-button add-to-cart-button"
 					onClick={addToCartAndClose}

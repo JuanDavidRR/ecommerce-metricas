@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 
 const Faq = () => {
   return (
-    <section className="Home">
+    <section className="container">
       <Helmet>
         <meta charSet="utf-8" />
         <title> Preguntas frequentes| Tienda Perrona</title>

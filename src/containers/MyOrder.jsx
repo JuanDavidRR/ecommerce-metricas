@@ -12,7 +12,7 @@ const MyOrder = ({ toggleOrders, setToggleOrders }) => {
 	const { state } = useContext(AppContext);
 
 	const sumTotal = () => {
-		const reducer = (accumalator, currentValue) => accumalator + currentValue.price;
+		const reducer = (accumalator, currentValue) => accumalator + parseInt(currentValue.productData.price);
 		const sum = state.cart.reduce(reducer, 0);
 		return sum;
 	}

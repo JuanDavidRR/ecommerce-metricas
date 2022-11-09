@@ -21,7 +21,7 @@ const Products = () => {
         debitis nihil ut, soluta, quasi harum recusandae nobis fugiat quibusdam
         illo laudantium aliquid rem!
       </p>
-      <ProductList infinityScroll={true} search={true} />
+      <ProductList infinityScroll={false} search={true} />
     </section>
   );
 };

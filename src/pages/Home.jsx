@@ -1,10 +1,15 @@
+import { useState } from "react";
 import { Helmet } from "react-helmet";
 import Header from "../components/Header";
 import ProductList from "../containers/ProductList";
+import axios from "axios";
+
 import "../styles/Home.scss";
 
 const Home = () => {
+
   return (
+
     <section className="Home">
       <Helmet>
         <meta charSet="utf-8" />
@@ -35,16 +40,7 @@ const Home = () => {
         </div>
       </section>
       <h2>Categoria perrona 1</h2>
-      <ProductList
-        infinityScroll={false}
-        customURL="https://api.escuelajs.co/api/v1/categories/1/products?limit=4&offset=1"
-      />
-      <h2>Categoria perrona 2</h2>
-
-      <ProductList
-        infinityScroll={false}
-        customURL="https://api.escuelajs.co/api/v1/categories/3/products?limit=4&offset=1"
-      />
+      <ProductList infinityScroll={false} search={false} />
 
       <section className="banner2">
 
@@ -63,10 +59,8 @@ const Home = () => {
 
       <h2>Categoria perrona 3</h2>
 
-      <ProductList
-        infinityScroll={false}
-        customURL="https://api.escuelajs.co/api/v1/categories/5/products?limit=4&offset=1"
-      />
+      <ProductList infinityScroll={false} search={false} />
+
     </section>
   );
 };

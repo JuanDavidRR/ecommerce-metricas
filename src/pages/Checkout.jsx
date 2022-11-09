@@ -1,15 +1,58 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import OrderItem from "../components/OrderItem";
 import AppContext from "../context/AppContext";
 import sumTotal from "../utils/sumTotal";
 import "../styles/Checkout.scss";
-import { Link } from "react-router-dom";
+import "../styles/CreateAccount.scss";
+
+import axios from "axios";
+import { useForm } from "../hooks/useForm";
 
 const Checkout = () => {
   const date = new Date();
   const {
     state: { cart },
   } = useContext(AppContext);
+
+  const [post, setPost] = useState(null);
+
+  const [
+    { fullname, nit, email, address, phoneNumber},
+    handleInputChange,
+  ] = useForm({
+    fullname: "",
+    nit: 0,
+    email: "",
+    address: "",
+    password: "",
+    phoneNumber: 0,
+  });
+
+  const API = "http://localhost:3000/api";
+
+  function createPost(e) {
+    e.preventDefault();
+    const user = {
+      nit: nit,
+      name: fullname,
+      address: 'address',
+      cityId: 1,
+      email: email,
+      phoneNumber: phoneNumber
+    };
+    console.log(user);
+
+    axios.post(`${API}/person`, user).then((response) => {
+      try {
+        setPost(response);
+        console.log('Persona');
+        console.log(response);
+        console.log(cart);
+      } catch (error) {
+        console.log(error);
+      }
+    });
+  }
 
   return (
     <div className="Checkout">
@@ -32,17 +75,73 @@ const Checkout = () => {
       </div>
       <section className="Checkout__payment">
         <h1>Checkout</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-          distinctio amet facilis dignissimos quos facere corrupti suscipit
-          ratione! Debitis consectetur id iste ut earum ipsum laborum deserunt,
-          laudantium natus quia.
-        </p>
+
         <p>
           Para esta transacción los datos de la cuenta será utilizados para
           realizar el
         </p>
         <form action="/" className="">
+          <section className="form-container">
+            <section>
+              <fieldset>
+                <legend>Nombre completo</legend>
+                <input
+                  className="CreateAccount__value"
+                  type="text"
+                  value={fullname}
+                  onChange={handleInputChange}
+                  name="fullname"
+                  id="fullname"
+                />
+              </fieldset>
+              <fieldset>
+                <legend>Documento de identificación</legend>
+                <input
+                  className="CreateAccount__value"
+                  type="number"
+                  value={nit}
+                  onChange={handleInputChange}
+                  name="nit"
+                  id="nit"
+                />
+              </fieldset>
+              <fieldset>
+                <legend>Correo Electronico</legend>
+                <input
+                  className="CreateAccount__value"
+                  type="email"
+                  value={email}
+                  onChange={handleInputChange}
+                  name="email"
+                  id="email"
+                />
+              </fieldset>
+            </section>
+            <section>
+              <fieldset>
+                <legend>Número celular</legend>
+                <input
+                  className="CreateAccount__value"
+                  type="number"
+                  value={phoneNumber}
+                  onChange={handleInputChange}
+                  name="phoneNumber"
+                  id="phoneNumber"
+                />
+              </fieldset>
+              <fieldset>
+                <legend>Dirección de domicilio</legend>
+                <input
+                  className="CreateAccount__value"
+                  type="text"
+                  value={address}
+                  onChange={handleInputChange}
+                  name="address"
+                  id="address"
+                />
+              </fieldset>
+            </section>
+          </section>
           <fieldset>
             <legend>Número de tarjeta de crédito</legend>
             <input type="number" />
@@ -61,7 +160,7 @@ const Checkout = () => {
             <legend>CVV</legend>
             <input type="number" max="9999" />
           </fieldset>
-          <button className="primary-button Login__button">Pagar</button>{" "}
+          <button onClick={createPost} className="primary-button Login__button">Pagar</button>{" "}
         </form>
       </section>
     </div>

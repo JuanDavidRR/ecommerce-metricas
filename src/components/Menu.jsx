@@ -6,10 +6,10 @@ const Menu = () => {
 		<div className="Menu">
 			<ul>
 				<li>
-					<a href="/account">My account</a>
+					<a href="/account">Mi Cuenta</a>
 				</li>
 				<li>
-					<a href="/signup">Sign out</a>
+					<a href="/signup">Salir</a>
 				</li>
 			</ul>
 		</div>

@@ -1,82 +1,84 @@
 .skeleton {
-    animation: skeleton-loading 1s linear infinite alternate;
-    border-radius: 20px;
+  animation: skeleton-loading 1s linear infinite alternate;
+  border-radius: 20px;
 }
 
 .skeleton-text {
-    min-width: 200px;
-    height: 5px;
-    margin: 1rem 0;
+  min-width: 200px;
+  height: 5px;
+  margin: 1rem 0;
 }
 
 .skeleton-text:last-child {
-    margin-bottom: 0;
-    width: 150px;
+  margin-bottom: 0;
+  width: 150px;
 }
 
 .header-img {
-    flex: 1;
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-    object-position: center;
+  flex: 1;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  @media (max-width: 500px) {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 @keyframes skeleton-loading {
+  0%,
+  100% {
+    background-color: gray;
+  }
 
-    0%,
-    100% {
-        background-color: gray;
-    }
-
-    100% {
-        background-color: gainsboro;
-    }
+  100% {
+    background-color: gainsboro;
+  }
 }
-
 
 .card-container-skeleton {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    align-items: center;
-    position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  align-items: center;
+  position: relative;
 }
 
-
 .card-skeleton {
-    padding: 15px;
-    gap: 20px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px gray;
-    align-items: center;
-    min-height: 200px;
+  padding: 15px;
+  gap: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px gray;
+  align-items: center;
+  min-height: 200px;
 }
 
 .card-skeleton .body-card {
-    flex: 1;
+  flex: 1;
 }
 
 .card-skeleton {
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    padding: 16px;
-    border-radius: 4px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding: 16px;
+  border-radius: 4px;
 }
 
 @media (max-width: 700px) {
-    main {
-        width: 100%;
-        padding: 0;
-    }
+  main {
+    width: 100%;
+    padding: 0;
+  }
 
-    .card-skeleton {
-        display: block;
-        margin: 0 auto;
-        text-align: center;
-    }
+  .card-skeleton {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
 
-    .card-container-skeleton {
-        display: block;
-    }
+  .card-container-skeleton {
+    display: block;
+  }
 }

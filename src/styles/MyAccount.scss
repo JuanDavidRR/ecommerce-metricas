@@ -3,19 +3,29 @@
 .MyAccount {
 	width: 90%;
 	display: grid;
-	margin: 0 auto;
+	margin: 4rem auto;
+
 }
 .MyAccount__form > section{
 	display: flex;
 	gap: 10px;
+	@media (max-width:500px) {
+		display: block;
+	}
 }
 
 .MyAccount__container{
 	display: flex;
-	gap: 4rem;
+	gap: 3rem;
 	margin-top: 3rem;
+	@media (max-width:500px) {
+		display: block;
+	}
 	.MyAccount__support{
 		flex: 1;
+		margin-bottom: 5rem;
+		border: 1px solid var(--hospital-green);
+		padding: 15px;
 	}
 	.MyAccount__info{
 		flex: 3;
@@ -33,6 +43,9 @@
 	border-radius: 10px;
 	border-color: var(--hospital-green);
 	width: 100%;
+	@media (max-width:500px) {
+		width: 85%;
+	}
 }
 
 .btn-tab{
@@ -48,6 +61,9 @@
 	&.active{
 		background-color: var(--hospital-green);
 		color: white;
+	}
+	@media (max-width:500px) {
+		width: 90%;
 	}
 }
 .title {

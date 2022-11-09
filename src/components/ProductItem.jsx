@@ -34,19 +34,19 @@ const ProductItem = ({ product }) => {
 	return (
 		<div className="ProductItem">
 			<LazyLoadImage
-				src={product.images[0]}
-				alt={product.title} className="productImage skeleton header-img"
+				src={product.productData.imageUrl}
+				alt={product.productData.name} className="productImage skeleton header-img"
 				onClick={() => setToggleProduct(!toggleProduct)}
 			/>
 			<div className="product-info">
 				<div>
-					<p>${product.price}</p>
-					<p>{product.title}</p>
+					<p>${product.productData.price}</p>
+					<p>{product.productData.name}</p>
 				</div>
 				<figure
 					onClick={() => handleClick(product)}
 				>
-					<LazyLoadImage alt={product.title} src={verifyAdded(product)}/>
+					<LazyLoadImage alt={product.productData.name} src={verifyAdded(product)}/>
 				</figure>
 			</div>
 			{toggleProduct && <ProductDetail
