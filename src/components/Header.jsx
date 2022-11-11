@@ -62,12 +62,15 @@ const Header = () => {
           <li>
             <NavLink to={"/faq"}>FAQ</NavLink>
           </li>
+          <li>
+            <NavLink to={"/orders"}>ORDENES</NavLink>
+          </li>
         </ul>
       </div>
       <div className="navbar-right">
         <ul>
-          <li className="navbar-email" onClick={handleClickDesktop}>
-            frailejo
+        <li>
+            <NavLink to={"/account"}>Mi Cuenta</NavLink>
           </li>
           <li
             className="navbar-shopping-cart"

@@ -19,11 +19,9 @@ const CreateAccount = lazy(() => import("../pages/CreateAccount"));
 const Checkout = lazy(() => import("../pages/Checkout"));
 const Orders = lazy(() => import("../pages/Orders"));
 
-const ProductDetail = lazy(() => import("../containers/ProductDetail"));
 const Products = lazy(() => import("../pages/Products"));
 const Faq = lazy(() => import("../pages/Faq"));
 
-const Category = lazy(() => import("../pages/Category"));
 const Loading = lazy(() => import("../components/Loading"));
 
 const App = () => {
@@ -51,6 +49,7 @@ const App = () => {
               <Route exact path="/checkout" element={<Checkout />} />
               <Route exact path="/orders" element={<Orders />} />
               <Route exact path="/faq" element={<Faq />} />
+
 
               <Route path="*" element={<NotFound />} />
             </Routes>

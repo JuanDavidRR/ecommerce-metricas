@@ -67,7 +67,7 @@ const Checkout = () => {
               <span className="order__date">
                 {date.getDate()}.{date.getMonth()}.{date.getFullYear()}
               </span>
-              <span className="order__quantity">{cart.length} articles</span>
+              <span className="order__quantity">{cart.length} Artículos</span>
             </p>
             <p className="order__total">$ {sumTotal(cart)}</p>
           </div>

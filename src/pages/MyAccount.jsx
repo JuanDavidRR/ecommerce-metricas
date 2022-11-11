@@ -1,11 +1,28 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Helmet } from "react-helmet";
+import Header from "../components/Header";
+import OrderItem from "../components/OrderItem";
+import AppContext from "../context/AppContext";
 import "../styles/MyAccount.scss";
 
 const MyAccount = () => {
   const [activeTab, setActiveTab] = useState("account");
+  const date = new Date();
+  const {
+    state: { cart },
+  } = useContext(AppContext);
 
   return (
     <div className="MyAccount">
+      	<Helmet>
+        <meta charSet="utf-8" />
+        <title>Mi cuenta | Tienda Perrona</title>
+        <meta
+          name="description"
+          content="La tienda ideal para todos los desarrolladores"
+        />
+      </Helmet>
+      <Header />
       <h1>My Account</h1>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, deserunt.
       Quisquam distinctio fugit maxime alias, blanditiis quidem est! Rem hic ea
@@ -114,6 +131,17 @@ const MyAccount = () => {
                 veritatis eligendi delectus laboriosam nostrum in porro error
                 minus perspiciatis cupiditate dolores placeat eaque!
               </p>
+              <div className="Checkout__content">
+          {cart.map((product, index) => (
+            <OrderItem indexValue={index} product={product} key={index} />
+          ))}
+          <div className="order">
+            <p className="order__info">
+
+              <span className="order__quantity">{cart.length} Artículos</span>
+            </p>
+          </div>
+        </div>
             </section>
           )}
         </section>

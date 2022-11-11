@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import AppContext from '../context/AppContext';
 import '../styles/Menu.scss';
 
 const Menu = () => {
+	const {
+    state: { cart },
+  } = useContext(AppContext);
+
 	return (
 		<div className="Menu">
 			<ul>
